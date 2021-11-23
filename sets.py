@@ -26,8 +26,10 @@ print(3 in numeros)
 print('\n/**************************************/\n')
 
 # Adicionando item ao Set.
+
 cidade.add('Natal')
 print(cidade)
+print('\n/**************************************/\n')
 
 # Unindo Sets.
 
