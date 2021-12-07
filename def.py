@@ -21,4 +21,4 @@ print(imc(80, 1.94))
 # return imc retora a condição e o valor 
 # se chamar apenas o return ele retorna a condição 
 # e um None ex: Normal 
-              # Nome
+# # Nome
