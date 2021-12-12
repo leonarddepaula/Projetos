@@ -39,3 +39,4 @@ np.array([1, 2, 3]) + np.array([1, 2])
 # soma subtração e divisão
 print('\n***SOMA SUBTRAÇÃO E DIVISÃO***\n')
 print('combinação de operações: \n', (x + y) / (x-2))
+
