@@ -74,7 +74,7 @@ plt.show()
 
 
 plt.figure(figsize=(10, 6))
-plt.plot(df['classification'].value_counts().sum(),'|', label='classification',color='#2dcc9c') # configurei a cor para ficar com mesmo tom
+plt.plot(df['classification'].value_counts(),'|', label='classification',color='#2dcc9c') # configurei a cor para ficar com mesmo tom
 plt.bar(df['classification'],height=df['temperatura'], width=0.4, color='#2dcc9c' ) # configuração da barra
 
 plt.show()
