@@ -4,8 +4,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-
-
 # classificação de padroes no scikit-learn 
 
 df = pd.read_csv('https://pycourse.s3.amazonaws.com/temperature.csv')
@@ -64,7 +62,7 @@ print('\n***************************************\n')
 
 print(output.describe())
 
-'''
+
 # contagem  de valores gerados
 plt.figure(figsize=(10, 5))
 plt.title('# novos valores gerados')
@@ -80,7 +78,7 @@ plt.figure(figsize=(10, 5))
 plt.plot(output['new_class'])
 plt.boxplot(output['new_temp'])
 plt.show()
-'''
+
 # sistema automatico
 def classify_temp():
     '''Classifica o input do usuario'''
@@ -103,4 +101,5 @@ def classify_temp():
 
         # pergunta
         ask = input('Nova classificação (y/n): ') == 'y'
+
 classify_temp()
