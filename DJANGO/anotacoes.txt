@@ -1,0 +1,21 @@
+# criar um ambiente -> python -m venv ambiente
+
+# ativar o ambiente -> source ambiente/Scripts/activate
+
+# dependencia django dentro do riquirements 
+## instalar dependencias no riquirements
+### -> pip intall -r requirements.txt
+
+
+# usar utilitario para criar um novo projeto django
+## -> django-admin startproject todo
+
+# criar micro aplicação / entrar no diretorio "todo"
+## python menage.py startapp microapp
+
+# entroa no microaap e colocar um hello world em views
+# dentro de microapp cria o modulo url.py para fazer o mapeamento entre 
+## a função e a rota raiz.
+### dentro de todo urls.py add comandos para interligar as urls.
+
+# COMANDO PARA RODAR --> python manage.py runserver
