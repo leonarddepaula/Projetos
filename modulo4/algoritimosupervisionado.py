@@ -1,3 +1,4 @@
+from tkinter.tix import Tree
 from sklearn import neighbors, datasets
 import pandas as pd
 import numpy as np
@@ -43,6 +44,20 @@ from sklearn.metrics import classification_report, confusion_matrix
 print(confusion_matrix(Y_test, y_pred))
 print(classification_report(Y_test, y_pred))
 
+from sklearn.tree import DecisionTreeClassifier # importa o classificador da Arvore de decisão
+from sklearn import metrics # importa as metricas para avaliação
+
+# Cria o objetivo de classificação atraves do 
+clf = DecisionTreeClassifier()
+
+# realiza o treinamento do classificador
+clf = clf.fit(x_train, y_train)
+
+# Realiza a previsão do Classificador
+y_pred = clf.predict(x_test)
+
+# Avaliar o modelo!
+
 # Realizar o plot da matriz de confusão
 matriz_confusao = confusion_matrix(Y_test, y_pred)
 from mlxtend.plotting import plot_confusion_matrix
@@ -50,3 +65,19 @@ from mlxtend.plotting import plot_confusion_matrix
 
 fig, ax = plot_confusion_matrix(conf_mat=matriz_confusao)
 plt.show()
+
+# Visualização da Arvore de decisão 
+# Importar das bibliotecas necessárias para realizar a visualização da arvore de decisão 
+from six import StringIO
+from sklearn.tree import export_graphviz
+from IPython.display import Image
+import pydotplus 
+
+# Constroi a árvore de decisão para o DB Iris
+dot_data = StringIO()
+export_graphviz(clf, out_file=dot_data,
+                filled=True, rounded=True,
+                special_characters=True, feature_names= iris.feature_names, class_names=['0', '1', '2'])
+graph = pydotplus.graph_from_dot_data(dot_data.getvalue())
+graph.write_png('iris.png')
+Image(graph.create_png())
