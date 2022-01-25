@@ -51,3 +51,4 @@ while True:
 
     pygame.display.update()
     
+# fim do programa
