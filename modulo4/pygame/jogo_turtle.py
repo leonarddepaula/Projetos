@@ -46,7 +46,7 @@ placar.speed()
 placar.color('yellow')
 placar.penup()
 placar.hideturtle()
-placar.goto(0, 260)
+placar.goto(0,260)
 placar.write("Jogador A: {} Jogador B: {}".format(pontuacao_A,pontuacao_B),align="center", font=("Courier", 24, "normal"))
 
 #funções  para o movimento
